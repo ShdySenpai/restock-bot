@@ -1,24 +1,4 @@
 {
-  "items": {
-    "https://www.stompinggroundstcg.com/products/one-piece-the-worlds-strongest-warriors-booster-box-op-17": {
-      "buyable": true,
-      "fails": 0,
-      "name": "ONE PIECE Card Game",
-      "price": 290.0,
-      "status": "in_stock"
-    },
-    "https://www.target.com/p/moo/A-1010892076": {
-      "buyable": null,
-      "fails": 12,
-      "name": "Pokémon TCG 30th Celebration Elite Trainer Box",
-      "status": "unknown"
-    },
-    "https://www.target.com/p/nintendo-switch-2-console/-/A-1011548511?preselect=94693225": {
-      "buyable": null,
-      "fails": 12,
-      "name": "Nintendo Switch 2",
-      "status": "unknown"
-    }
-  },
+  "items": {},
   "watchlist_error": null
 }
