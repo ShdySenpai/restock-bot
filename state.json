@@ -1,4 +1,12 @@
 {
-  "items": {},
+  "items": {
+    "https://forgeandfiregaming.com/one-piece/the-dominance-of-god-booster-box/": {
+      "buyable": true,
+      "fails": 0,
+      "name": "OP-18 Booster Box",
+      "price": 219.95,
+      "status": "in_stock"
+    }
+  },
   "watchlist_error": null
 }
