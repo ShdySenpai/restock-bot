@@ -22,18 +22,6 @@
 #    - The lines under it start with exactly 2 spaces
 #    - Put quotes around a name if it contains a colon (:)
 # =====================================================================
-
-- name: Pokémon TCG 30th Celebration Elite Trainer Box
-  url: https://www.target.com/p/moo/A-1010892076
-  msrp: 49.99
-
-- name: Nintendo Switch 2
-  url: https://www.target.com/p/nintendo-switch-2-console/-/A-1011548511?preselect=94693225
-  msrp: 499.99
-
-- name: ONE PIECE Card Game
-  url: https://www.stompinggroundstcg.com/products/one-piece-the-worlds-strongest-warriors-booster-box-op-17
-  msrp: 120.00
 # ---------------------------------------------------------------------
 #  COPY THIS EXAMPLE (remove the # at the start of each line):
 #
