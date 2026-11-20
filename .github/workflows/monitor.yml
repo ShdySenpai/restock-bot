@@ -54,6 +54,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
         run: python monitor.py --test
 
       - name: Check the watchlist
@@ -62,6 +63,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
         run: python monitor.py
 
       - name: Save stock state
