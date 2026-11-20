@@ -1,1 +1,17 @@
-{"items": {}}
+{
+  "items": {
+    "https://www.target.com/p/moo/A-1010892076": {
+      "buyable": null,
+      "fails": 1,
+      "name": "Pokémon TCG 30th Celebration Elite Trainer Box",
+      "status": "unknown"
+    },
+    "https://www.target.com/p/nintendo-switch-2-console/-/A-1011548511?preselect=94693225": {
+      "buyable": null,
+      "fails": 1,
+      "name": "Nintendo Switch 2",
+      "status": "unknown"
+    }
+  },
+  "watchlist_error": null
+}
