@@ -1,0 +1,39 @@
+# =====================================================================
+#  RESTOCK BOT WATCHLIST — anyone in the group can edit this file
+# =====================================================================
+#
+#  TO ADD SOMETHING (cards, games, shoes, anything):
+#    1. Tap the ✏️ pencil on GitHub to edit this file
+#    2. Copy the 3-line example at the very bottom and paste it under the last item
+#    3. Change the name and url, then tap "Commit changes"
+#  The bot checks it within a few minutes and posts "👀 Now watching..." in Discord.
+#
+#  TO REMOVE SOMETHING: delete its lines and commit.
+#
+#  OPTIONAL extras you can add under any item:
+#    msrp: 49.99          shows if the store price is at, over, or under retail
+#    max_price: 120       only ping if it's in stock at or under this price
+#    ebay_search: "..."   different words for the eBay price comparison
+#    added_by: Robert     shows who added it
+#    mention: "<@&ROLE_ID>"   ping a Discord role instead of @here (or "" for no ping)
+#
+#  RULES THAT KEEP IT WORKING:
+#    - Every item starts with "- name:" at the left edge
+#    - The lines under it start with exactly 2 spaces
+#    - Put quotes around a name if it contains a colon (:)
+# =====================================================================
+
+- name: Pokémon TCG 30th Celebration Elite Trainer Box
+  url: https://www.target.com/p/moo/A-1010892076
+  msrp: 49.99
+
+- name: Nintendo Switch 2
+  url: https://www.target.com/p/nintendo-switch-2-console/-/A-1011548511?preselect=94693225
+  msrp: 499.99
+
+# ---------------------------------------------------------------------
+#  COPY THIS EXAMPLE (remove the # at the start of each line):
+#
+# - name: Name of the thing
+#   url: https://paste-the-product-page-link-here
+# ---------------------------------------------------------------------
