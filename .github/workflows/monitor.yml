@@ -1,0 +1,86 @@
+name: Restock check
+
+on:
+  schedule:
+    # Every 15 minutes, on odd minutes (GitHub delays jobs scheduled exactly on the hour)
+    - cron: "7,22,37,52 * * * *"
+  push:
+    # Check right away whenever someone edits the watchlist
+    branches: [main]
+    paths: [watchlist.yaml]
+  workflow_dispatch:
+    # Lets you press "Run workflow" by hand in the Actions tab
+    inputs:
+      test:
+        description: "Just send a test alert to Discord"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # save state.json back to the repo
+  actions: write    # keep the 15-minute schedule from being paused after 60 quiet days
+
+concurrency:
+  group: restock-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest   # standard runner = free in a public repo
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: Cache the Chromium browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Send test alert
+        if: ${{ inputs.test }}
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: python monitor.py --test
+
+      - name: Check the watchlist
+        if: ${{ !inputs.test }}
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: python monitor.py
+
+      - name: Save stock state
+        if: ${{ !inputs.test }}
+        run: |
+          git config user.name "restock-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "Update stock state"
+          git pull --rebase --autostash
+          git push
+
+      - name: Keep the schedule switched on
+        if: ${{ github.event_name == 'schedule' }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/monitor.yml/enable"
