@@ -1,5 +1,12 @@
 {
   "items": {
+    "https://www.stompinggroundstcg.com/products/one-piece-the-worlds-strongest-warriors-booster-box-op-17": {
+      "buyable": true,
+      "fails": 0,
+      "name": "ONE PIECE Card Game",
+      "price": 290.0,
+      "status": "in_stock"
+    },
     "https://www.target.com/p/moo/A-1010892076": {
       "buyable": null,
       "fails": 12,
@@ -13,5 +20,5 @@
       "status": "unknown"
     }
   },
-  "watchlist_error": "b2f96276cb"
+  "watchlist_error": null
 }
