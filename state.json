@@ -2,7 +2,7 @@
   "items": {
     "https://forgeandfiregaming.com/more/gundam-card-game-stardust-trails-booster-box/": {
       "buyable": null,
-      "fails": 9,
+      "fails": 10,
       "name": "Gundam GD-06",
       "status": "unknown"
     },
@@ -12,6 +12,12 @@
       "name": "OP-18 Booster Box",
       "price": 219.95,
       "status": "in_stock"
+    },
+    "https://www.bestbuy.com/product/nintendo-switch-2-pro-controller-black/J7GSL57TYS": {
+      "buyable": null,
+      "fails": 1,
+      "name": "Legend of Zelda Pro Controller",
+      "status": "unknown"
     }
   },
   "watchlist_error": null
