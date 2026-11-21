@@ -2,7 +2,7 @@
   "items": {
     "https://forgeandfiregaming.com/more/gundam-card-game-stardust-trails-booster-box/": {
       "buyable": null,
-      "fails": 10,
+      "fails": 11,
       "name": "Gundam GD-06",
       "status": "unknown"
     },
@@ -15,7 +15,7 @@
     },
     "https://www.bestbuy.com/product/nintendo-switch-2-pro-controller-black/J7GSL57TYS": {
       "buyable": null,
-      "fails": 1,
+      "fails": 2,
       "name": "Legend of Zelda Pro Controller",
       "status": "unknown"
     }
