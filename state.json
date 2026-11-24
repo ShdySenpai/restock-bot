@@ -8,10 +8,10 @@
     },
     "https://forgeandfiregaming.com/one-piece/the-dominance-of-god-booster-box/": {
       "buyable": true,
-      "fails": 0,
+      "fails": 1,
       "name": "OP-18 Booster Box",
       "price": 219.95,
-      "status": "in_stock"
+      "status": "unknown"
     },
     "https://www.bestbuy.com/product/nintendo-switch-2-pro-controller-black/J7GSL57TYS": {
       "buyable": null,
