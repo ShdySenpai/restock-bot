@@ -2,14 +2,14 @@
   "items": {
     "https://forgeandfiregaming.com/more/gundam-card-game-stardust-trails-booster-box/": {
       "buyable": true,
-      "fails": 2,
+      "fails": 3,
       "name": "Gundam GD-06",
       "price": 109.95,
       "status": "unknown"
     },
     "https://forgeandfiregaming.com/one-piece/the-dominance-of-god-booster-box/": {
       "buyable": true,
-      "fails": 9,
+      "fails": 10,
       "name": "OP-18 Booster Box",
       "price": 219.95,
       "status": "unknown"
